@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de caixas</title>
+    <style>
+        
+        /*
+        no navegador clicando em inspecionar, dá pra alterar momentaneamente as características
+        */
+        
+        h1 {
+            
+            height: 300px;
+            width: 300px;
+            background-color: beige;
+
+            border: 10px;
+            border-style: dashed;
+            border-color: aquamarine;
+
+            /*esse border de baixo é uma simplificação do de cima
+            não importa a ordem*/
+
+            border: aquamarine dashed 10px;
+
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+
+            padding: 10px 10px 10px 10px;
+            padding: 10px; /* se todos os lados forem iguais, não precisa colocar 4 vezes como no segundo padding*/
+            padding: 10px 20px; /*se colocar 2 valores, vai ficar 10px em cima e em baixo e 20px na esquerda e na direita*/
+            padding: 10px 20px 30px;
+            /*da pra olhar no inspecionar do navegador como ficou*/ 
+
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            margin: 10px auto;
+
+            outline: 10px;
+            outline-style: dashed;
+            outline-color: blueviolet;
+        }
+        a {
+            display: block;
+            border-width: 1px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de caixa box-level</h1>
+    <p>Parágrafos também são exemplos de box-level <a href="#">links são exemplo de caixas inline</a>. Vamos ver como tudo isso funciona</p>
+</body>
+</html>

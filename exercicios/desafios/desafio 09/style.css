@@ -1,0 +1,16 @@
+body{
+    background-color: black;
+    font: normal 15pt Arial;
+}
+header{
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+section {
+    text-align: center;
+}
+a :link, a :visited {
+    color: aliceblue;
+    background-color: antiquewhite;
+    text-decoration: none;
+}

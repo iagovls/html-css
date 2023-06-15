@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML%</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Aula para ensinar sobre imagens de tamanhos diferentes para dispositivos diferentes. Pode testar aumentando e diminuindo a janela.</p>
+    <p>A ordem dos source faz diferença.</p>
+    <p>Thayná é o amor da minha vida</p>
+    <img src="imagens/IMG_5804.jpg" alt="">
+    <picture>
+        <source media="(max-width: 700px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1000px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="imagem flexível">
+    </picture>
+    <h1>Reproduzindo áudios</h1>
+    <p>Gustavo Guanabara fala sobre ter certeza que o audio vai funcionar. a tag audio padrão não funcionaou no navegador dele por exemplo.
+    A outra maneira é tag source dentro da tag audio
+    </p>
+    <!-- <audio src="audios/RingsideDyalla.mp3" controls autoplay></audio> essa tag é mais fácil mas não é completa. Pode não funcionar em alguns navegadores. -->
+    <p>A tag para audio é source src. Diferentemente da source media type da imagem. Nessa ordem de source se o mp3 não funcionar no site, o navegador vai tentar o audio de baixo. Se não funcionar é porque o navegador não tem suporte para esses formatos de arquivos e ai deve aparecer o último parágrafo com o link.</p>
+    <p>Sobre o preload. Se colocar auto, o site só vai finalizar o carregamento do site inteiro depois de baixar o áudio e isso é perigoso se der alguma falha ou o arquivo for pesado. metadata é para carregar apenas as informações do arquivo como título e link. none não carrega nada até o usuário clicar no link</p>
+    <p>controls aparece a opção de play pause e volume</p>
+    <p>autoplay começa o audio automaticamente</p>
+    <p>loop inicia o audio novamente quando o audio terminar</p>
+    <audio preload="metadata" controls autoplay loop>
+        <source src="audios/RingsideDyalla.mp3" type="audio/mpeg">
+        <source src="audios/RingsideDyalla.wav" type="audio/wav">
+        <source src="audios/RingsideDyalla.ogg" type="audio/ogg">
+        <p>Infelizmente não foi possível carregar o áudio. Você pode baixar clicando aqui. <a href="audios/RingsideDyalla.mp3"></a></p>
+    </audio> 
+</body>
+</html>
